@@ -74,13 +74,16 @@ function swapPairs(arr) {
 // swapPairs(testArr);
 // swapPairs(testArrTwo);
 
-// REMOVE DUPLICATES - work in progress
+// REMOVE DUPLICATES
 function removeDupes(arr) {
+  compInd = 0;
   for (var i = 0; i < arr.length; i++) {
-    if (arr[i] == arr[i + 1]) {
-      arr[i] = arr[i + 1];
+    if (arr[i] !== arr[compInd]) {
+      compInd++;
+      arr[compInd] = arr[i];
     }
   }
+  arr.length = compInd + 1;
   console.log(arr);
 }
-removeDupes(testArrThree);
+// removeDupes(testArrThree);
