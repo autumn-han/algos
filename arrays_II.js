@@ -48,17 +48,15 @@ function rotate(arr, shiftBy) {
 
 // FILTER RANGE
 function filterRange(arr, min, max) {
-  var count = 0;
   for (var i = 0; i < arr.length; i++) {
-    if (!(min < arr[i] && arr[i] < max)) {
-      count++;
-      var temp = arr[i];
-      arr[i] = arr[i + 1];
-      arr[i + 1] = temp;
-      console.log(count);
+    if (min >= arr[i] || arr[i] >= max) {
+      for (var j = i + 1; j < arr.length; j++) {
+        arr[j - 1] = arr[j];
+      }
+      arr.length--;
+      i--;
     }
   }
-  arr.length = count + 1;
   return arr;
 }
 console.log(filterRange(testArr, 3, 8));
