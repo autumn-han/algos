@@ -45,3 +45,20 @@ function rotate(arr, shiftBy) {
 }
 // rotate(testArr, shiftByTest);
 // rotate(testArrTwo, shiftByTestNeg);
+
+// FILTER RANGE
+function filterRange(arr, min, max) {
+  var count = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (!(min < arr[i] && arr[i] < max)) {
+      count++;
+      var temp = arr[i];
+      arr[i] = arr[i + 1];
+      arr[i + 1] = temp;
+      console.log(count);
+    }
+  }
+  arr.length = count + 1;
+  return arr;
+}
+console.log(filterRange(testArr, 3, 8));
