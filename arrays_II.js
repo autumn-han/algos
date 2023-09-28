@@ -33,7 +33,7 @@ function rotate(arr, shiftBy) {
       }
     }
   } else if (shiftBy < 0) {
-    for (var j = 0; j >= shiftBy - 1; j--) {
+    for (var j = 0; j > shiftBy; j--) {
       for (var i = 0; i < arr.length - 1; i++) {
         var temp = arr[i];
         arr[i] = arr[i + 1];
@@ -43,7 +43,5 @@ function rotate(arr, shiftBy) {
   }
   console.log(arr);
 }
-rotate(testArr, shiftByTest);
-rotate(testArr, shiftByTestNeg);
-rotate(testArrTwo, shiftByTest);
-rotate(testArrTwo, shiftByTestNeg);
+// rotate(testArr, shiftByTest);
+// rotate(testArrTwo, shiftByTestNeg);
