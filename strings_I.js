@@ -1,17 +1,16 @@
 // TEST VARIABLES
 var testStr = "la l al ala l a";
+var testStrTwo = "I can not BELIEVE it's not BUTTER";
 
 // REMOVE BLANKS
 function removeBlanks(str) {
+  var newStr = "";
   for (var i = 0; i < str.length; i++) {
-    if (str[i] == " ") {
-      for (var j = i; j < str.length; j++) {
-        str[j + 1] = str[j];
-      }
-      str.length--;
-      i--;
+    if (str[i] !== " ") {
+      newStr += str[i];
     }
   }
-  return str;
+  return newStr;
 }
-console.log(removeBlanks(testStr));
+// console.log(removeBlanks(testStr));
+// console.log(removeBlanks(testStrTwo));
