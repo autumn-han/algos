@@ -59,4 +59,17 @@ function filterRange(arr, min, max) {
   }
   return arr;
 }
-console.log(filterRange(testArr, 3, 8));
+// console.log(filterRange(testArr, 3, 8));
+
+// CONCAT
+function concat(arr, arrTwo) {
+  var newArr = [];
+  for (var i = 0; i < arr.length; i++) {
+    newArr[i] = arr[i];
+  }
+  for (var i = 0; i < arrTwo.length; i++) {
+    newArr[arr.length + i] = arrTwo[i];
+  }
+  return newArr;
+}
+// console.log(concat(testArr, testArrTwo));
