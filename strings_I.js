@@ -4,6 +4,8 @@ var testStrTwo = "I can not BELIEVE it's not BUTTER";
 var testStrThree = "abc8c0d1ngd0j0!8";
 var testStrFour = "0s1a3y5w7h9a2t4?6!8?0";
 var testStrFive = "Live from New York, it's Saturday Night!";
+var testArr = ["Good morning", "sunshine", "the", "Earth", "says", "hello"];
+var testArrTwo = ["There", "is", "a", "bug", "in", "the", "system"];
 
 // REMOVE BLANKS
 function removeBlanks(str) {
@@ -56,3 +58,18 @@ function countNonSpaces(str) {
 }
 // console.log(countNonSpaces(testStr));
 // console.log(countNonSpaces(testStrTwo));
+
+// REMOVE SHORTER STRINGS
+function removeShortStrs(arr, min) {
+  var newArr = [];
+  var idx = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i].length >= min) {
+      newArr[idx] = arr[i];
+      idx++;
+    }
+  }
+  return newArr;
+}
+// console.log(removeShortStrs(testArr, 7));
+// console.log(removeShortStrs(testArrTwo, 3));
