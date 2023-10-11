@@ -41,17 +41,33 @@ class SLL1 {
     }
     return this.head.data;
   }
+  // DISPLAY
+  display() {
+    if (!this.head) {
+      return null;
+    }
+    let runner = this.head;
+    let string = "";
+    while (runner !== null) {
+      string = string + runner.data + ", ";
+      runner = runner.next;
+    }
+    console.log(string);
+  }
 }
+
 // TESTING
-var mySLL1 = new SLL1();
-mySLL1.addFront(18);
-mySLL1.addFront(5);
-mySLL1.addFront(73);
-console.log(mySLL1);
+// var mySLL1 = new SLL1();
+// mySLL1.addFront(18);
+// mySLL1.addFront(5);
+// mySLL1.addFront(73);
+// console.log(mySLL1);
 
-mySLL1.removeFront();
-console.log(mySLL1);
-mySLL1.removeFront();
-console.log(mySLL1);
+// mySLL1.removeFront();
+// console.log(mySLL1);
+// mySLL1.removeFront();
+// console.log(mySLL1);
 
-console.log(mySLL1.front());
+// console.log(mySLL1.front());
+
+// mySLL1.display();
