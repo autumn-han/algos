@@ -69,6 +69,43 @@ class SLL1 {
     }
     return here;
   }
+  // LENGTH
+  length() {
+    if (!this.head) {
+      return null;
+    }
+    let count = 0;
+    let runner = this.head;
+    while (runner !== null) {
+      count++;
+      runner = runner.next;
+    }
+    return count;
+  }
+  // MAX / MIN / AVG
+  max() {
+    if (!this.head) {
+      return null;
+    }
+    let answer = "";
+    let avg = 0;
+    let sum = 0;
+    let max = this.head.data;
+    let min = this.head.data;
+    let runner = this.head;
+    while (runner !== null) {
+      sum += runner.data;
+      if (runner.data < min) {
+        min = runner.data;
+      } else if (runner.data > max) {
+        max = runner.data;
+      }
+      runner = runner.next;
+    }
+    avg = sum / this.length();
+    answer = "max: " + max + ", min: " + min + ", average: " + avg;
+    return answer;
+  }
 }
 
 // TESTING
@@ -89,3 +126,7 @@ console.log(mySLL1);
 
 // console.log(mySLL1.contains(18));
 // console.log(mySLL1.contains(12));
+
+// console.log(mySLL1.length());
+
+// console.log(mySLL1.max());
