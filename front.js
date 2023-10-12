@@ -54,14 +54,29 @@ class SLL1 {
     }
     console.log(string);
   }
+  // CONTAINS
+  contains(value) {
+    if (!this.head) {
+      return null;
+    }
+    let here = false;
+    let runner = this.head;
+    while (runner !== null) {
+      if (runner.data === value) {
+        here = true;
+      }
+      runner = runner.next;
+    }
+    return here;
+  }
 }
 
 // TESTING
-// var mySLL1 = new SLL1();
-// mySLL1.addFront(18);
-// mySLL1.addFront(5);
-// mySLL1.addFront(73);
-// console.log(mySLL1);
+var mySLL1 = new SLL1();
+mySLL1.addFront(18);
+mySLL1.addFront(5);
+mySLL1.addFront(73);
+console.log(mySLL1);
 
 // mySLL1.removeFront();
 // console.log(mySLL1);
@@ -71,3 +86,6 @@ class SLL1 {
 // console.log(mySLL1.front());
 
 // mySLL1.display();
+
+// console.log(mySLL1.contains(18));
+// console.log(mySLL1.contains(12));
