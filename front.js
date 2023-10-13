@@ -83,7 +83,7 @@ class SLL1 {
     return count;
   }
   // MAX / MIN / AVG
-  max() {
+  maxMinAvg() {
     if (!this.head) {
       return null;
     }
@@ -129,4 +129,4 @@ console.log(mySLL1);
 
 // console.log(mySLL1.length());
 
-// console.log(mySLL1.max());
+// console.log(mySLL1.maxMinAvg());
