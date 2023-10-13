@@ -14,4 +14,15 @@ function rSigma(num) {
 // console.log(rSigma(2.5));
 
 // rFactorial
-function rFactorial(num) {}
+function rFactorial(num) {
+  if (num % 1 !== 0) {
+    num = Math.floor(num);
+  }
+  if (num > 0) {
+    return num * rFactorial(num - 1);
+  } else {
+    return 1;
+  }
+}
+// console.log(rFactorial(3));
+// console.log(rFactorial(6.5));
